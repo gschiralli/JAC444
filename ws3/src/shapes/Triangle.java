@@ -48,7 +48,12 @@ public class Triangle implements Shape{
 	
 	@Override
 	public String toString() {
-		return String.format("%s {s1=%.1f, s2=%.1f,s3=%.1f}\n", this.getClass().getSimpleName(), this.getSideA(), this.getSideB(),this.getSideC());
+		return String.format("%s {s1=%.1f, s2=%.1f,s3=%.1f} perimeter = %.4f\n", 
+				this.getClass().getSimpleName(), 
+				this.getSideA(), 
+				this.getSideB(),
+				this.getSideC(),
+				this.perimeter());
 	}
 	
 	

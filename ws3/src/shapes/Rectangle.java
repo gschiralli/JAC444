@@ -41,7 +41,11 @@ public class Rectangle implements Shape{
 	//Override toString method
 	@Override
 	public String toString() {
-		return String.format("%s {w=%.1f, h=%.1f}\n", this.getClass().getSimpleName(), this.getWidth(), this.getHeight());
+		return String.format("%s {w=%.1f, h=%.1f} perimeter = %.4f\n",
+				this.getClass().getSimpleName(), 
+				this.getWidth(), 
+				this.getHeight(),
+				this.perimeter());
 	}
 
 	//implement interface method

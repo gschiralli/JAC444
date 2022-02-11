@@ -9,7 +9,10 @@ public class Square extends Rectangle{
 	
 	@Override
 	public String toString() {
-		return String.format( "%s {s=%s} ", this.getClass().getSimpleName(), this.getWidth());
+		return String.format( "%s {s=%s} perimeter = %.4f\n", 
+				this.getClass().getSimpleName(), 
+				this.getWidth(),
+				this.perimeter());
 	}
 	
 	@Override
