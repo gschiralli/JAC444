@@ -28,7 +28,7 @@ public class Circle implements Shape {
 	@Override
 	public String toString() {
 		
-		return String.format("%s {r=%.1f} perimeter = %.5f\n", 
+		return String.format("%s {r=%.1f} perimeter = %.5f", 
 				this.getClass().getSimpleName(),
 				this.getRadius(),
 				this.perimeter());

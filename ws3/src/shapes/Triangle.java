@@ -8,7 +8,7 @@ public class Triangle implements Shape{
 	{
 		if(sideA < 0 || sideB < 0 || sideC < 0 || (sideA > sideB + sideC) ||(sideB > sideA + sideC) ||(sideC > sideB + sideA) )
 		{
-			throw new Exception("Invalid side(s)");
+			throw new Exception("Invalid side(s)!");
 		}
 		this.sideA = sideA;
 		this.sideB = sideB;
@@ -48,7 +48,7 @@ public class Triangle implements Shape{
 	
 	@Override
 	public String toString() {
-		return String.format("%s {s1=%.1f, s2=%.1f,s3=%.1f} perimeter = %.4f\n", 
+		return String.format("%s {s1=%.1f, s2=%.1f, s3=%.1f} perimeter = %.4f", 
 				this.getClass().getSimpleName(), 
 				this.getSideA(), 
 				this.getSideB(),

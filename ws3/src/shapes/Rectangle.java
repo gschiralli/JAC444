@@ -10,7 +10,7 @@ public class Rectangle implements Shape{
 	{
 		if(width < 0 || height < 0)
 		{
-			throw new Exception("Invalid side");
+			throw new Exception("Invalid side!");
 		}
 		this.setHeight(height);
 		this.setWidth(width);
@@ -41,7 +41,7 @@ public class Rectangle implements Shape{
 	//Override toString method
 	@Override
 	public String toString() {
-		return String.format("%s {w=%.1f, h=%.1f} perimeter = %.4f\n",
+		return String.format("%s {w=%.1f, h=%.1f} perimeter = %.4f",
 				this.getClass().getSimpleName(), 
 				this.getWidth(), 
 				this.getHeight(),
