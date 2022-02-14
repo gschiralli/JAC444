@@ -8,6 +8,7 @@ public class Rectangle implements Shape{
 	
 	public Rectangle(final double width,final double height) throws Exception
 	{
+		//Throws error if negative value
 		if(width < 0 || height < 0)
 		{
 			throw new Exception("Invalid side!");

@@ -25,6 +25,8 @@ public class Main {
 			//split the string into tokens with "," as the delimiter
 			String[] tokens = s.split(",");
 			
+			
+			//Switch case for the 0th index(Shape name)
 			switch(tokens[0])
 			{
 			case "Circle":
