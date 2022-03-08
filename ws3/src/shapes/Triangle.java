@@ -6,6 +6,7 @@ public class Triangle implements Shape{
 	
 	public Triangle(final double sideA ,final double sideB,final double sideC) throws Exception
 	{
+		//throws error if one side is greater than the sum of the other two sides or if negative values.
 		if(sideA < 0 || sideB < 0 || sideC < 0 || (sideA > sideB + sideC) ||(sideB > sideA + sideC) ||(sideC > sideB + sideA) )
 		{
 			throw new Exception("Invalid side(s)!");

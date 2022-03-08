@@ -6,6 +6,7 @@ public class Circle implements Shape {
 	
 	public Circle(final double radius) throws Exception
 	{
+		//throws error if radius is negative
 		if(radius < 0)
 		{
 			throw new Exception("Invalid radius!");
