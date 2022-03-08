@@ -172,6 +172,7 @@ public class Main {
 		double parallelogramTotal = 0;
 		double triangleTotal = 0;
 		//Task 3
+		System.out.println("------->Task 3 ... <-------");
 		for(int i = 0; i < filterCount; ++i)
 		{
 			if(filteredShapes[i] instanceof Parallelogram)
@@ -186,16 +187,6 @@ public class Main {
 		
 		System.out.printf("Total perimeter of parallelogram is: %.5f\n", parallelogramTotal);
 		System.out.printf("Total perimeter of triangle is: %f\n", triangleTotal);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		
