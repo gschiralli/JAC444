@@ -64,14 +64,14 @@ public class DeSerializeStudentsGUI {
 					
 					for(Student s : students)
 					{
-						int i = 0;
+						int i = 1;
 						JTextArea data = new JTextArea("ID: " + s.getStdId() + "\nFirst name: " + s.getFirstName()
 						+ "\nLast name: " + s.getLastName() + "\nCourses: " +  s.getCourses().toString());
 						data.setEditable(false);
 						
 						
 						
-						JLabel l = new JLabel("Student " + ++i);
+						JLabel l = new JLabel("Student " + s.getStdId());
 						dataPanel.add(l);
 						dataPanel.add(data);
 						
