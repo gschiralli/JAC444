@@ -13,8 +13,8 @@ public class Main {
 		Shape shapes[] = new Shape[50];
 		int count = 0;
 		
-		System.out.println("------->JAC 444 Assignment 1<-------");
-		System.out.println("------->Task 1 ... <-------");
+		System.out.println("------->Workshop 7<-------");
+		System.out.println("------->Task 4<-------");
 		
 		//Task 1
 		try (BufferedReader br = new BufferedReader(new FileReader("shapes.txt"))) {
@@ -113,85 +113,7 @@ public class Main {
 			System.out.println();
 		}
 			
-		//Task 2
-		double minTriangle = 0;
-		double maxCircle = 0;
-		boolean flag = true;
-		
-		//Getting a base min for triangle;
-		for(int i = 0; i < count && flag; ++i)
-		{
-			if(shapes[i] instanceof Triangle)
-			{
-				minTriangle = shapes[i].perimeter();
-				flag = false;
-			}
-			
-		}
-		
-		for(int i = 0; i < count; ++i)
-		{
-			if(shapes[i] instanceof Triangle && shapes[i].perimeter() < minTriangle)
-			{
-				minTriangle = shapes[i].perimeter();
 				
-			}
-			else if(shapes[i] instanceof Circle && shapes[i].perimeter() > maxCircle)
-			{
-				maxCircle = shapes[i].perimeter();
-			}
-			
-		}
-		
-		//Filter out the shapes into new array
-		Shape filteredShapes[] = new Shape[count];
-		int filterCount = 0;
-		
-		for(int i = 0; i < count; ++i)
-		{
-			//if the shape matches the minPerimeter or maxPerimeter skip over them
-			if(shapes[i] instanceof Triangle && shapes[i].perimeter() == minTriangle
-			|| shapes[i] instanceof Circle && shapes[i].perimeter() == maxCircle)
-			{
-				continue;
-			}
-			else {
-				
-			filteredShapes[filterCount++] = shapes[i];
-			}			
-					
-		}
-	
-		System.out.println("------->Task 2 ... <-------");
-		
-		//Print out the filtered shapes
-		for(int i = 0; i < filterCount; ++i) {
-			
-			System.out.println(filteredShapes[i].toString());
-			System.out.println();
-		}		
-		
-		double parallelogramTotal = 0;
-		double triangleTotal = 0;
-		//Task 3
-		System.out.println("------->Task 3 ... <-------");
-		for(int i = 0; i < filterCount; ++i)
-		{
-			if(filteredShapes[i] instanceof Parallelogram)
-			{
-				parallelogramTotal += filteredShapes[i].perimeter();
-			}
-			else if(filteredShapes[i] instanceof Triangle)
-			{
-				triangleTotal += filteredShapes[i].perimeter();
-			}
-		}
-		
-		System.out.printf("Total perimeter of parallelogram is: %.5f\n", parallelogramTotal);
-		System.out.printf("Total perimeter of triangle is: %f\n", triangleTotal);
-		
-		
-		
 		
 		}
 		

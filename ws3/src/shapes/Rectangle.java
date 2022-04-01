@@ -5,6 +5,7 @@ public class Rectangle implements Shape{
 	
 	private double height;
 	private double width;
+	public ShapeArea area;
 	
 	public Rectangle(final double width,final double height) throws Exception
 	{
@@ -15,6 +16,7 @@ public class Rectangle implements Shape{
 		}
 		this.setHeight(height);
 		this.setWidth(width);
+		area = () -> getWidth() * getHeight();
 	}
 	
 	
@@ -42,11 +44,12 @@ public class Rectangle implements Shape{
 	//Override toString method
 	@Override
 	public String toString() {
-		return String.format("%s {w=%.1f, h=%.1f} perimeter = %.4f",
+		return String.format("%s {w=%.1f, h=%.1f} perimeter = %.4f area = %.4f",
 				this.getClass().getSimpleName(), 
 				this.getWidth(), 
 				this.getHeight(),
-				this.perimeter());
+				this.perimeter(),
+				area.getArea());
 	}
 
 	//implement interface method

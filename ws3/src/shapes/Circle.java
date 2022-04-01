@@ -3,6 +3,7 @@ package shapes;
 public class Circle implements Shape {
 
 	private double radius;
+	public ShapeArea area;
 	
 	public Circle(final double radius) throws Exception
 	{
@@ -12,6 +13,8 @@ public class Circle implements Shape {
 			throw new Exception("Invalid radius!");
 		}
 		this.radius = radius;
+		area = () -> this.radius * this.radius * Math.PI;
+		
 	}
 	
 	
@@ -29,10 +32,11 @@ public class Circle implements Shape {
 	@Override
 	public String toString() {
 		
-		return String.format("%s {r=%.1f} perimeter = %.5f", 
+		return String.format("%s {r=%.1f} perimeter = %.5f area = %.5f", 
 				this.getClass().getSimpleName(),
 				this.getRadius(),
-				this.perimeter());
+				this.perimeter(),
+				area.getArea());
 	}
 	
 	@Override
